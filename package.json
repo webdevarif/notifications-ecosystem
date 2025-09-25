@@ -1,0 +1,73 @@
+{
+  "name": "@webdevarif/notifications",
+  "version": "1.0.0",
+  "description": "A customizable, framework-agnostic notifications system with pluggable storage and WebSocket adapters",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./client": {
+      "types": "./dist/client/index.d.ts",
+      "import": "./dist/client/index.mjs",
+      "require": "./dist/client/index.js"
+    },
+    "./server": {
+      "types": "./dist/server/index.d.ts",
+      "import": "./dist/server/index.mjs",
+      "require": "./dist/server/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run clean && npm run build"
+  },
+  "keywords": [
+    "notifications",
+    "websocket",
+    "real-time",
+    "react",
+    "typescript",
+    "framework-agnostic",
+    "pluggable",
+    "storage-adapter"
+  ],
+  "author": "WebDevArif",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/ws": "^8.5.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "ws": "^8.14.0",
+    "eventemitter3": "^5.0.0"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webdevarif/notifications.git"
+  },
+  "bugs": {
+    "url": "https://github.com/webdevarif/notifications/issues"
+  },
+  "homepage": "https://github.com/webdevarif/notifications#readme"
+}
